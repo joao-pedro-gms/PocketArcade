@@ -1,0 +1,34 @@
+# Gradle e arquivos gerados
+.gradle/
+**/build/
+.kotlin/
+.cxx/
+.externalNativeBuild/
+captures/
+*.apk
+*.aab
+
+# Configuração local e IDEs
+local.properties
+.idea/
+.vscode/
+*.iml
+/tmp/
+*.log
+
+# Credenciais e assinatura
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+key.properties
+keystore.properties
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini

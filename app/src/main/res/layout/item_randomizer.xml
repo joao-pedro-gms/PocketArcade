@@ -1,0 +1,9 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/white" app:cardElevation="0dp" app:strokeColor="@color/line" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:id="@+id/itemCategory" android:layout_weight="1" />
+            <androidx.appcompat.widget.AppCompatImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/deleteItemButton" android:src="@drawable/ic_trash" android:padding="15dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/ui_remove_item" app:tint="@color/muted" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:id="@+id/itemWord" android:textSize="16sp" android:layout_marginTop="2dp" android:layout_marginBottom="18dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

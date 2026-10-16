@@ -1,0 +1,16 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/scrollView" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/menuContent" android:padding="@dimen/screen_padding">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <com.google.android.material.button.MaterialButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/backButton" style="@style/Widget.PocketArcade.Button.Text" android:text="@string/ui_back_start" app:icon="@drawable/ic_back" />
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:text="@string/ui_brand_small" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Title" android:id="@+id/welcome" android:layout_marginTop="24dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Body" android:textColor="@color/muted" android:layout_marginTop="10dp" android:layout_marginBottom="28dp" android:text="@string/choose_challenge" />
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/card_scanner" android:id="@+id/cardScanner" android:layout_marginBottom="@dimen/challenge_card_spacing" />
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/card_arena" android:id="@+id/cardArena" android:layout_marginBottom="@dimen/challenge_card_spacing" />
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/card_vault" android:id="@+id/cardVault" android:layout_marginBottom="@dimen/challenge_card_spacing" />
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/card_randomizer" android:id="@+id/cardRandomizer" android:layout_marginBottom="@dimen/challenge_card_spacing" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginTop="10dp" android:layout_marginBottom="12dp" android:text="@string/ui_hub_footer" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

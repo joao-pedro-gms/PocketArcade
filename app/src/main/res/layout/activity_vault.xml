@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/toolbar_game" android:id="@+id/navigation" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/screenContent" android:padding="@dimen/screen_padding" android:focusableInTouchMode="true">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:textColor="@color/accent" android:text="@string/ui_tag_logic" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Title" android:layout_marginTop="10dp" android:text="@string/ui_vault_heading" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginTop="10dp" android:text="@string/vault_subtitle" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:labelFor="@id/guessInput" android:layout_marginTop="28dp" android:text="@string/ui_code_label" />
+            <androidx.appcompat.widget.AppCompatEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/guessInput" style="@style/Widget.PocketArcade.Input" android:hint="@string/ui_code_hint" android:inputType="number" android:gravity="center" android:textSize="28sp" android:fontFamily="monospace" android:letterSpacing="0.18" android:maxLength="4" android:minHeight="72dp" android:layout_marginTop="10dp" android:imeOptions="actionDone" />
+            <com.google.android.material.button.MaterialButton android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/guessButton" style="@style/Widget.PocketArcade.Button.Primary" android:layout_marginTop="16dp" android:text="@string/ui_check_code" app:icon="@drawable/ic_check" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:id="@+id/vaultMessage" android:layout_marginTop="16dp" android:accessibilityLiveRegion="polite" android:text="@string/vault_locked" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:background="@drawable/bg_card" android:layout_marginTop="24dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:text="@string/ui_clues_heading" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_clue_correct" android:importantForAccessibility="no" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginStart="10dp" android:text="@string/ui_clue_correct" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_clue_misplaced" android:importantForAccessibility="no" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginStart="10dp" android:text="@string/ui_clue_misplaced" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_clue_absent" android:importantForAccessibility="no" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginStart="10dp" android:text="@string/ui_clue_absent" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Heading" android:layout_marginTop="28dp" android:text="@string/ui_attempts_heading" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:id="@+id/emptyHistory" android:padding="20dp" android:background="@drawable/bg_card" android:layout_marginTop="14dp" android:text="@string/empty_history" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/historyContainer" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:id="@+id/timeResult" android:textColor="@color/accent" android:layout_marginTop="16dp" />
+            <com.google.android.material.button.MaterialButton android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/newGameButton" style="@style/Widget.PocketArcade.Button.Primary" android:layout_marginTop="20dp" android:visibility="gone" android:text="@string/new_game" app:icon="@drawable/ic_refresh" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

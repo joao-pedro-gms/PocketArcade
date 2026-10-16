@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/screenContent" android:paddingTop="24dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:textColor="@color/accent" android:text="@string/ui_tag_chance" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Title" android:layout_marginTop="10dp" android:text="@string/randomizer_title" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginTop="10dp" android:text="@string/ui_random_instructions" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:labelFor="@id/categorySpinner" android:layout_marginTop="24dp" android:text="@string/ui_category_label" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input">
+        <Spinner android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/categorySpinner" android:spinnerMode="dropdown" android:background="@android:color/transparent" android:paddingStart="4dp" android:paddingEnd="36dp" android:contentDescription="@string/ui_category_label" />
+        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_down" android:layout_gravity="end|center_vertical" android:layout_marginEnd="16dp" android:contentDescription="@null" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Label" android:labelFor="@id/itemInput" android:layout_marginTop="20dp" android:text="@string/ui_item_label" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
+        <androidx.appcompat.widget.AppCompatEditText android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/itemInput" style="@style/Widget.PocketArcade.Input" android:hint="@string/ui_item_hint" android:inputType="textCapSentences" android:layout_weight="1" android:imeOptions="actionDone" />
+        <com.google.android.material.button.MaterialButton android:layout_width="56dp" android:layout_height="wrap_content" android:id="@+id/addButton" style="@style/Widget.PocketArcade.Button.Secondary" android:layout_marginStart="12dp" app:iconGravity="textStart" app:iconPadding="0dp" android:paddingLeft="16dp" android:paddingRight="16dp" android:contentDescription="@string/ui_add_item" app:icon="@drawable/ic_plus" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/drawButton" style="@style/Widget.PocketArcade.Button.Primary" android:layout_marginTop="20dp" android:text="@string/ui_draw_category" app:icon="@drawable/ic_random" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/drawResultPanel" android:padding="20dp" android:background="@drawable/bg_surface" android:layout_marginTop="16dp" android:visibility="gone">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:textColor="@color/accent" android:text="@string/ui_drawn_label" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Heading" android:id="@+id/drawResult" android:layout_marginTop="10dp" android:accessibilityLiveRegion="polite" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="32dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Heading" android:layout_weight="1" android:text="@string/ui_collection" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:id="@+id/itemCount" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="14dp">
+        <com.google.android.material.button.MaterialButton android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/listModeButton" style="@style/Widget.PocketArcade.Button.Mode" android:layout_weight="1" android:text="@string/list" app:icon="@drawable/ic_list" />
+        <com.google.android.material.button.MaterialButton android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/gridModeButton" style="@style/Widget.PocketArcade.Button.Mode" android:layout_weight="1" android:layout_marginStart="12dp" android:text="@string/grid" app:icon="@drawable/ic_grid" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:textSize="12sp" android:layout_marginTop="12dp" android:layout_marginBottom="16dp" android:text="@string/ui_collection_hint" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:id="@+id/emptyCollection" android:background="@drawable/bg_card" android:padding="20dp" android:layout_marginBottom="16dp" android:visibility="gone" android:text="@string/ui_collection_empty" />
+</LinearLayout>

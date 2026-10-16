@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="input_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="challenge_card_min_height">136dp</dimen>
+    <dimen name="challenge_card_spacing">14dp</dimen>
+</resources>

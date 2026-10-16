@@ -1,0 +1,11 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/challenge_card_spacing" android:minHeight="@dimen/challenge_card_min_height" android:clickable="true" android:focusable="true" app:cardCornerRadius="@dimen/card_radius" app:cardElevation="0dp" app:cardBackgroundColor="@color/white" app:strokeColor="@color/line" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_random" app:tint="@color/accent" android:contentDescription="@string/randomizer_icon_description" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Caption" android:layout_weight="1" android:layout_marginStart="12dp" android:text="@string/ui_tag_chance" />
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_forward" android:contentDescription="@null" android:importantForAccessibility="no" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Heading" android:layout_marginTop="18dp" android:text="@string/randomizer_title" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Text.PocketArcade.Supporting" android:layout_marginTop="7dp" android:text="@string/ui_random_summary" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
