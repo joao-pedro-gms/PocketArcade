@@ -2,6 +2,16 @@
 
 Aplicativo Android nativo com quatro experiências de jogos e utilidades, desenvolvido em Java e XML com Material Components e View Binding.
 
+## Baixar e instalar
+
+**[Baixar o APK do Pocket Arcade 1.0](https://github.com/joao-pedro-gms/PocketArcade/releases/download/v1.0.0/PocketArcade-1.0.apk)**
+
+1. Baixe o APK no seu celular com Android 6.0 ou superior.
+2. Abra o arquivo e, se solicitado pelo Android, permita a instalação de aplicativos pela fonte usada para o download.
+3. Toque em **Instalar** e abra o Pocket Arcade.
+
+O arquivo também está disponível na página de [Releases](https://github.com/joao-pedro-gms/PocketArcade/releases). Esta distribuição usa o APK de desenvolvimento, assinado com a chave de debug, para instalação manual.
+
 ## Funcionalidades
 
 | Módulo | O que faz |
